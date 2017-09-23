@@ -18,7 +18,7 @@ class BkPayments < Sinatra::Base
       x_currency: params['x_currency'],
       x_test: params['x_test'],
       x_amount: params['x_amount'],
-      x_gateway_reference: 'gateway_reference',
+      x_gateway_reference: "BK-" + "#{rand(10**15)}",
       x_timestamp: Time.now.utc,
       x_result: 'completed',
     }
